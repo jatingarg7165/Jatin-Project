@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="default" extends="struts-default">
+
+<action name="register" class="skilrock.jatin.RegisterAction">
+<result name="input">student-register.jsp</result>
+<result name="success">student-login.jsp</result>
+<result name="error">student-register-error.jsp</result>
+</action>
+
+<action name="login" class="skilrock.jatin.LoginAction">  
+<result name="success" >student-profile.jsp</result>  
+<result name="error" >student-login-error.jsp</result>
+</action>
+
+<action name="profile" class="skilrock.jatin.ProfileAction">  
+<result name="success" >student-profile.jsp</result>
+<result name="error" >student-profile-error.jsp</result>  
+</action>
+
+<action name="logout" class="skilrock.jatin.LoginAction" method="logout">  
+<result name="success" >student-login.jsp</result>
+<result name="error" >student-profile.jsp</result>
+</action>
+
+<action name="details" class="skilrock.jatin.DetailsAction">  
+<result name="success" >details-view.jsp</result>  
+<result name="error" >student-profile-error.jsp</result>
+</action>
+  
+<action name="edit">  
+<result name="success" >details-edit.jsp</result>  
+<result name="error" >student-profile-error.jsp</result>
+</action>
+
+<action name="personal" class="skilrock.jatin.EditAction" >  
+<result name="success" >details-edited.jsp</result>
+<result name="error" >student-profile-error.jsp</result>  
+</action>
+
+<action name="marks" class="skilrock.jatin.MarksViewAction" >  
+<result name="success" >marks-view.jsp</result>
+<result name="error" >student-profile-error.jsp</result>  
+</action>
+
+<action name="attend" class="skilrock.jatin.AttendanceViewAction" >  
+<result name="success" >attendance-view.jsp</result>
+<result name="error" >student-profile-error.jsp</result>  
+</action>
+
+<action name="aregister" class="skilrock.jatin.ARegisterAction">
+<result name="input">admin-register.jsp</result>
+<result name="success">admin-login.jsp</result>
+<result name="error">admin-register-error.jsp</result>
+</action>
+
+<action name="alogin" class="skilrock.jatin.ALoginAction">  
+<result name="success" >admin-profile.jsp</result>  
+<result name="error" >admin-login-error.jsp</result>
+</action>
+
+<action name="student-list" class="skilrock.jatin.StudentListAction">  
+<result name="success" >admin-student-list.jsp</result>  
+<result name="error" >admin-profile-error.jsp</result>
+</action>
+  
+<action name="all-student-details" class="skilrock.jatin.AllStudentDetailsAction">  
+<result name="success" >admin-student-details.jsp</result>  
+<result name="error" >admin-profile-error.jsp</result>
+</action>
+
+<action name="student-edit">  
+<result name="success" >admin-student-details-edit.jsp</result>  
+<result name="error" >admin-profile-error.jsp</result>
+</action>
+
+<action name="st-details" class="skilrock.jatin.EditAction" >  
+<result name="success" >admin-student-details-edited.jsp</result>
+<result name="error" >admin-profile-error.jsp</result>  
+</action>
+
+<action name="allmarks" class="skilrock.jatin.AllStudentMarksAction">  
+<result name="success" >admin-student-marks.jsp</result>  
+<result name="error" >admin-profile-error.jsp</result>
+</action>
+
+<action name="student-marks-edit" >  
+<result name="success" >marks-edit.jsp</result>
+<result name="error" >student-profile-error.jsp</result>  
+</action>
+
+<action name="student-marks" class="skilrock.jatin.MarksEditAction" >  
+<result name="success" >marks-edited.jsp</result>
+<result name="error" >student-profile-error.jsp</result>  
+</action>
+
+<action name="add-student-marks" >  
+<result name="success" >add-student-marks.jsp</result>
+<result name="error" >student-profile-error.jsp</result>  
+</action>
+
+<action name="add-student" class="skilrock.jatin.AddStudentMarksAction" >
+<result name="input" >add-student-marks.jsp</result>  
+<result name="success" >student-marks-added.jsp</result>
+<result name="error" >student-add-error.jsp</result>  
+</action>
+
+<action name="attendance" class="skilrock.jatin.AttendanceAction" >  
+<result name="success" >admin-attendance.jsp</result>
+<result name="error" >admin-profile-error.jsp</result>  
+</action>
+
+<action name="attend-present-edit" class="skilrock.jatin.AttendancePresentAction" >  
+<result name="success" >admin-attendance-present.jsp</result>
+<result name="error" >admin-profile-error.jsp</result>  
+</action>
+
+<action name="attend-absent-edit" class="skilrock.jatin.AttendanceAbsentAction" >  
+<result name="success" >admin-attendance-absent.jsp</result>
+<result name="error" >admin-profile-error.jsp</result>  
+</action>
+</package>
+</struts>    
